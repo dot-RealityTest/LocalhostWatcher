@@ -7,7 +7,7 @@
     <title>LocalhostWatcher | Keep Every Local Service in View</title>
     <meta
       name="description"
-      content="LocalhostWatcher is a macOS menu bar app that detects localhost services, checks their health, and helps you relaunch the right stack after login."
+      content="LocalhostWatcher is a macOS menu bar app that keeps your localhost apps visible, healthy, and easy to reopen."
     />
     <link rel="icon" type="image/png" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
@@ -43,17 +43,17 @@
       <main id="main-content">
         <section class="hero section" id="top">
           <div class="hero-copy" data-reveal="fade-up">
-            <p class="eyebrow">dev utility / macOS / localhost visibility</p>
+            <p class="eyebrow">macOS menu bar app / localhost visibility / quick recovery</p>
             <h1>
-              Stop guessing which
+              Keep every
               <span class="serif">localhost</span>
-              process just silently failed.
+              app in one clear view.
             </h1>
             <p class="hero-body">
-              LocalhostWatcher is a Swift-built macOS menu bar utility for people running multiple
-              local services at once. It detects active TCP listeners, checks whether each
-              localhost endpoint really responds, and gives you one place to inspect, open, stop,
-              or restore the stack without bouncing between browser tabs and terminal panes.
+              LocalhostWatcher gives your Mac a simple control layer for everything running on
+              localhost. It sits in the menu bar, shows which apps are active, checks what is
+              actually responding, and helps you open, stop, or relaunch the right app without
+              hunting for the right window, tab, or command.
             </p>
 
             <div class="hero-badge">
@@ -65,24 +65,9 @@
                 height="120"
               />
               <div class="hero-badge-copy">
-                <span>Swift menu bar utility</span>
-                <span>Real app icon, real SF Symbols, real localhost process workflow</span>
+                <span>Native macOS app</span>
+                <span>Built for people who want localhost apps to feel manageable again</span>
               </div>
-            </div>
-
-            <div class="terminal-preview" aria-label="Example development workflow">
-              <div class="terminal-bar">
-                <span class="terminal-dot terminal-dot-red"></span>
-                <span class="terminal-dot terminal-dot-yellow"></span>
-                <span class="terminal-dot terminal-dot-green"></span>
-                <span class="terminal-title">dev session</span>
-              </div>
-              <pre class="terminal-code"><code>$ swift build
-$ ./run-menubar.sh
-> watching localhost listeners...
-> 5173 healthy   frontend · vite
-> 3000 healthy   api · node
-> 8080 unhealthy cms · astro</code></pre>
             </div>
 
             <div class="hero-actions">
@@ -103,9 +88,9 @@ $ ./run-menubar.sh
             </div>
 
             <ul class="signal-list" aria-label="Product highlights">
-              <li>Replace scattered port hunting with one compact control surface</li>
-              <li>Use health checks to separate “listening” from “actually usable”</li>
-              <li>Recover the stack you care about after login with less setup churn</li>
+              <li>See active localhost apps in one glance from the menu bar</li>
+              <li>Spot unhealthy apps before they waste your time</li>
+              <li>Bring back the apps you use most after login with less friction</li>
             </ul>
           </div>
 
@@ -207,7 +192,7 @@ $ ./run-menubar.sh
 
               <div class="signal-card signal-card-side">
                 <p class="mini-label">Auto relaunch</p>
-                <p class="mini-copy">Persist the launch commands you actually reuse so the next boot feels closer to ready.</p>
+                <p class="mini-copy">Save the apps you rely on so your next session starts closer to ready.</p>
               </div>
             </div>
           </div>
@@ -216,7 +201,7 @@ $ ./run-menubar.sh
         <section class="metrics section" aria-label="Key capabilities">
           <div class="metric" data-reveal="fade-up">
             <span class="metric-value">3s</span>
-            <span class="metric-label">automatic refresh interval for active localhost scans</span>
+            <span class="metric-label">between automatic refreshes of your active localhost apps</span>
           </div>
           <div class="metric" data-reveal="fade-up">
             <span class="metric-value metric-symbol-wrap">
@@ -229,42 +214,42 @@ $ ./run-menubar.sh
               />
               HEAD
             </span>
-            <span class="metric-label">probes tell you what is reachable, not just what has a port open</span>
+            <span class="metric-label">checks tell you what is reachable, not just what is open</span>
           </div>
           <div class="metric" data-reveal="fade-up">
             <span class="metric-value">2 views</span>
-            <span class="metric-label">separate live services from saved relaunch targets</span>
+            <span class="metric-label">keep active apps and saved reopen targets neatly separated</span>
           </div>
         </section>
 
         <section class="story section" id="story">
           <div class="section-heading" data-reveal="fade-up">
             <p class="eyebrow">Problem</p>
-            <h2>The expensive part of local dev is context loss.</h2>
+            <h2>The hardest part is not opening apps. It is keeping track of them.</h2>
           </div>
 
           <div class="story-grid">
             <article class="story-card" data-reveal="fade-up">
-              <h3>Ports are easy. Clarity is hard.</h3>
+              <h3>Running apps multiply faster than visibility does</h3>
               <p>
-                When multiple services spin up across Node, Astro, Vite, or custom binaries, the
-                shell confirms activity, not whether the thing you need is usable right now.
+                When several localhost apps are open at once, it gets harder to know what is live,
+                what is broken, and which app belongs to which port.
               </p>
             </article>
 
             <article class="story-card" data-reveal="fade-up">
-              <h3>Half-alive services waste the most time</h3>
+              <h3>Broken apps often still look alive</h3>
               <p>
-                A stuck CMS, dead API, or half-booted preview can still look “up” until it burns a
-                tab switch, a browser refresh, and a few minutes of investigation.
+                A stuck preview, dead API, or half-open local app can still look “up” until it
+                costs you a refresh loop, a few tab switches, and unnecessary debugging.
               </p>
             </article>
 
             <article class="story-card" data-reveal="fade-up">
-              <h3>Your repeatable stack should actually be repeatable</h3>
+              <h3>The apps you always reopen should come back easily</h3>
               <p>
-                Save the services worth reviving once, then let the app remember the command and
-                working directory that gets you back to work faster.
+                Save the apps worth reviving once, then let LocalhostWatcher remember how to bring
+                them back when you need them again.
               </p>
             </article>
           </div>
@@ -273,45 +258,44 @@ $ ./run-menubar.sh
         <section class="feature-showcase section" id="features">
           <div class="section-heading" data-reveal="fade-up">
             <p class="eyebrow">What it does</p>
-            <h2>A developer-focused status layer for everything bound to localhost.</h2>
+            <h2>A small Mac app that makes localhost feel organized.</h2>
           </div>
 
           <div class="feature-grid">
             <article class="feature-card feature-card-large" data-reveal="fade-up">
               <p class="feature-index">01</p>
-              <h3>Maps the local machine into something you can read at a glance.</h3>
+              <h3>Shows your running localhost apps in one readable list.</h3>
               <p>
-                It scans listeners with <code>lsof</code>, maps each port back to the owning
-                process, and resolves friendlier names for common JavaScript runtimes so the menu
-                bar tells you something useful immediately.
+                It scans listeners, maps each port back to the owning process, and resolves
+                friendlier names so the menu bar tells you something useful immediately.
               </p>
             </article>
 
             <article class="feature-card" data-reveal="fade-up">
               <p class="feature-index">02</p>
-              <h3>Checks health like a tool, not like a marketing screenshot.</h3>
+              <h3>Tells you which apps are actually responding.</h3>
               <p>
-                Lightweight HTTP <code>HEAD</code> checks classify services as healthy, unhealthy, or
-                unknown so the menu bar count becomes actionable, not decorative.
+                Lightweight HTTP <code>HEAD</code> checks classify apps as healthy, unhealthy, or
+                unknown so the menu bar state becomes actionable, not decorative.
               </p>
             </article>
 
             <article class="feature-card" data-reveal="fade-up">
               <p class="feature-index">03</p>
-              <h3>Keeps the fix path short.</h3>
+              <h3>Keeps common actions close.</h3>
               <p>
-                Open the local URL, stop a single process, or kill every unhealthy service without
-                opening another terminal or remembering which process owned which port.
+                Open the local URL, stop a single app, or clean up unhealthy ones without leaving
+                the menu bar.
               </p>
             </article>
 
             <article class="feature-card" data-reveal="fade-up">
               <p class="feature-index">04</p>
-              <h3>Remembers the stack you actually restart.</h3>
+              <h3>Remembers the apps you want back later.</h3>
               <p>
-                Save the processes worth reviving. LocalhostWatcher stores the original launch
+                Save the apps worth reviving. LocalhostWatcher stores the original launch
                 command and working directory when it can, then makes a careful relaunch attempt so
-                your next session starts closer to ready.
+                your next session starts faster.
               </p>
             </article>
           </div>
@@ -320,29 +304,29 @@ $ ./run-menubar.sh
         <section class="workflow section" id="workflow">
           <div class="section-heading" data-reveal="fade-up">
             <p class="eyebrow">Workflow</p>
-            <h2>Observe. Verify. Recover.</h2>
+            <h2>See it. Check it. Reopen it.</h2>
           </div>
 
           <ol class="workflow-list">
             <li class="workflow-step" data-reveal="fade-right">
               <span class="workflow-number">1</span>
               <div>
-                <h3>Observe the live machine state</h3>
-                <p>See which localhost ports are active, who owns them, and how long they have been up.</p>
+                <h3>See what is running</h3>
+                <p>See which localhost apps are active, who owns them, and how long they have been up.</p>
               </div>
             </li>
             <li class="workflow-step" data-reveal="fade-right">
               <span class="workflow-number">2</span>
               <div>
-                <h3>Verify the endpoints that matter</h3>
-                <p>Each discovered service gets a fast response check so you can find the broken endpoint before it expands into a debugging session.</p>
+                <h3>Check what actually responds</h3>
+                <p>Each discovered app gets a fast response check so you can find the broken one before it slows you down.</p>
               </div>
             </li>
             <li class="workflow-step" data-reveal="fade-right">
               <span class="workflow-number">3</span>
               <div>
-                <h3>Recover the stack worth keeping warm</h3>
-                <p>Mark login-worthy services now, then let the app restore the setup you actually reuse instead of reconstructing it from memory.</p>
+                <h3>Reopen the apps you care about</h3>
+                <p>Mark the apps worth saving now, then let the app restore the setup you actually reuse.</p>
               </div>
             </li>
           </ol>
@@ -351,13 +335,13 @@ $ ./run-menubar.sh
         <section class="cta section" id="download" data-reveal="fade-up">
           <div class="cta-copy">
             <p class="eyebrow">Get it</p>
-            <h2>Keep your localhost stack one click away.</h2>
+            <h2>Keep your localhost apps one click away.</h2>
             <p>
-              LocalhostWatcher ships as a standalone macOS app bundle, a public GitHub repo, and a
-              tagged release. Download the app directly or inspect the source before you install.
+              LocalhostWatcher ships as a standalone macOS app bundle with a public GitHub repo and
+              tagged releases. Download the app directly or inspect the source before you install.
             </p>
             <p class="cta-note">
-              Recommended install: notarized DMG. Alternate download: ZIP. Source and issues live on GitHub.
+              Recommended install: notarized DMG. Alternate download: ZIP. Source and releases live on GitHub.
             </p>
           </div>
 

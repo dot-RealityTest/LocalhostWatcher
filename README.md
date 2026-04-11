@@ -1,23 +1,29 @@
 # LocalhostWatcher
 
-LocalhostWatcher is a macOS menu bar app for monitoring local development servers.
+LocalhostWatcher is a macOS menu bar app that keeps your localhost apps visible, healthy, and easy to reopen.
 
-It discovers TCP listeners on `localhost`, shows health status, lets you open or stop processes quickly, and can relaunch selected apps automatically after login.
+It discovers active services on `localhost`, shows which ones actually respond, lets you open or stop them quickly, and can relaunch selected apps automatically after login.
+
+## Get the App
+
+- [Website](https://akakika.com/localhostwatcher/)
+- [Download DMG](https://github.com/dot-RealityTest/LocalhostWatcher/releases/download/v1.0/LocalhostWatcher-1.0.dmg)
+- [Release Notes](https://github.com/dot-RealityTest/LocalhostWatcher/releases/tag/v1.0)
 
 ## What It Does
 
-- Lives in the macOS menu bar as a lightweight utility.
-- Detects active localhost servers and the process behind each port.
+- Lives quietly in the macOS menu bar as a lightweight utility.
+- Detects active localhost apps and the process behind each port.
 - Checks whether each detected service responds on `http://localhost:<port>`.
-- Shows unhealthy services in both the menu bar state and the popover UI.
-- Lets you stop individual services or kill all unhealthy services from the menu.
-- Saves launchable services so they can be relaunched automatically on login.
+- Shows unhealthy services in both the menu bar state and the app popover.
+- Lets you open, stop, or clean up services quickly.
+- Saves selected apps so they can be relaunched automatically after login.
 - Supports launch-at-login for the watcher itself.
 
 ## Main Views
 
-- `Active`: currently detected localhost listeners.
-- `Login`: saved processes that should be relaunched after login.
+- `Active`: the localhost apps currently running on your Mac.
+- `Login`: the saved apps you want back after login.
 
 ## Menu Bar Behavior
 
@@ -39,7 +45,7 @@ Context menu actions:
 - macOS 14+
 - Xcode command line tools / Swift 5.9+
 
-## Development
+## Build From Source
 
 Build:
 
