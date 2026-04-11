@@ -264,6 +264,14 @@ a.button {
   margin-top: 2rem;
 }
 
+.cta-note {
+  margin-top: 1rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -893,6 +901,11 @@ code {
   color: var(--text-tertiary);
   font-size: 0.86rem;
   font-family: var(--font-mono);
+}
+
+.site-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 [data-reveal] {
