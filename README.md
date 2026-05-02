@@ -195,7 +195,7 @@ A: Health checks only verify the port is responding (HTTP 200/301/302). Authenti
 
 ## 📄 License
 
-**Private** — All rights reserved to KIKA.
+**Private — All rights reserved to KIKA.**
 
 ---
 
